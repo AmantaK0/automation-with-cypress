@@ -10,5 +10,6 @@ The framework follows Cypress best practices and avoids implicit waits, using as
 - JavaScript (ES6)
 - Page Object Model (POM)
 - Git & GitHub
+- Mocha report
 
 ---
