@@ -2,7 +2,7 @@ import user from '../fixtures/user.json'
 
 class RegisterPage{
     register() {
-        return cy.contains('button', 'Register').click()
+        return cy.contains('button', 'Register')
     }
 
     genderMale() {
@@ -50,7 +50,7 @@ class RegisterPage{
         this.firstName().type(user.firstName)
         this.lastName().type(user.lastName)
         this.email().type(user.email)
-        this.companyName.type(user.company)
+        this.companyName().type(user.company)
         this.password().type(user.password)
         this.confirmPassword().type(user.password)
         this.registerButton().click()

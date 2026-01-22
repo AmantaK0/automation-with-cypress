@@ -17,8 +17,8 @@ describe('Compare list test', () => {
     })
 
     it('Adds items to wishlist with intercept', () => {
-        main.computersMenu()
-        main.clickNotebooks()
+        main.computersMenu().trigger('mouseover')
+        main.notebooksLink().click()
 
         notebooks.pageTitle()
             .should('contain.text', 'Notebooks')
@@ -33,13 +33,11 @@ describe('Compare list test', () => {
             '**/addproducttocart/details/*'
         ).as('addToWishlist')
 
-        productDetailsPage.addToWishlistButton().click()
+        notebooks.addtoWishlist().click()
 
-        // verify backend request happened
         cy.wait('@addToWishlist').its('response.statusCode')
             .should('eq', 200)
 
-        // verify success notification
         productDetailsPage.wishlistSuccessNotification()
             .should('be.visible')
             .and('contain.text', 'The product has been added to your wishlist')

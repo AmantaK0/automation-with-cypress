@@ -12,11 +12,11 @@ class NotebooksPage{
     }
 
     addtoWishlist() {
-        cy.contains('button', 'Add to wishlist').click()
+        cy.contains('button', 'Add to wishlist')
     }
 
     addtoCart() {
-        cy.contains('button', 'Add to cart').click()
+        cy.contains('button', 'Add to cart')
     }
 
     notification() {

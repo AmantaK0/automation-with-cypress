@@ -20,7 +20,7 @@ class LoginPage{
     login(user){
         this.email().type(user.email)
         this.password().type(user.password)
-        this.loginButton.click()
+        this.loginButton().click()
     }
 }
 

@@ -9,7 +9,6 @@ describe('User logs in', () =>{
     it('Logs in successfully', () =>{
         cy.visit('https://demo.nopcommerce.com')
 
-        // main.loginlink().click()
         main.loginlink()
         .should('be.visible')
         .and('have.text', 'Log in')
